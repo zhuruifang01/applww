@@ -31,9 +31,9 @@
 </head>
 <body>
 <div id="header">
-	<div class="title">
-		<div class="active">攻略</div>
-		<div>单品</div>
+	<div class="titlee">
+		<div>攻略</div>
+		<div class="active">单品</div>
 	</div>
 	<div class="sousuo">
 		<input type="text" value="搜索单品、攻略"/>
@@ -45,7 +45,7 @@
 		<div class="up">
 			<img src="img/x3.jpg" alt="" />
 		</div>
-		<ul class="scroller scrollerbangdan">
+		<ul class="scroller ">
 			<!--品类-->
 			<li>
 				<div class="title">品类
@@ -119,35 +119,52 @@
 			</li>
 		</ul>
 		<!--单品-->
-		<!--<ul class="scroller">
-			<li class="banner">
-				<img src="img/t3.jpg" alt="" />
-			</li>
-			<li class="con">
-				<a href=""><img src="img/t21.jpg" alt="" /></a>
-			</li>
-			<li class="con">
-				<a href=""><img src="img/t21.jpg" alt="" /></a>
-			</li>
-			<li class="con">
-				<a href=""><img src="img/t21.jpg" alt="" /></a>
-			</li>
-			<li class="con">
-				<a href=""><img src="img/t21.jpg" alt="" /></a>
-			</li>
-			<li class="con">
-				<a href=""><img src="img/t21.jpg" alt="" /></a>
-			</li>
-			<li class="con">
-				<a href=""><img src="img/t21.jpg" alt="" /></a>
-			</li>
-			<li class="con">
-				<a href=""><img src="img/t21.jpg" alt="" /></a>
-			</li>
-			<li class="con">
-				<a href=""><img src="img/t21.jpg" alt="" /></a>
-			</li>
-		</ul>-->
+		<ul class="scroller scrollerbangdan">
+			<div class="left">
+				<li class="activefl">热门分类</li>
+				<li>个性配饰</li>
+				<li>温暖家居</li>
+				<li>美味厨房</li>
+				<li>美味礼物</li>
+				<li>数码小物</li>
+				<li>创意文具</li>
+				<li>美容护肤</li>
+				<li>精致彩妆</li>
+				<li>运动户外</li>
+			</div>
+			<div class="right">
+				<li class="activeimg">
+					<img src="img/s0.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/s1.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/s2.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/s3.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/s4.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/s5.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/s6.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/s7.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/s8.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/s9.jpg" alt="" />
+				</li>
+			</div>;
+		</ul>
 		<div class="down">正在加载......</div>
 	</div>
 </div>
@@ -171,4 +188,19 @@
 	</a>
 </div>
 </body>
-</body>
+<script type="text/javascript">
+// 攻略 单品 选项卡
+   $("#header .titlee div").click(function(){
+   	  var index=$(this).index();
+   	   $("#header .titlee div").removeClass("active").eq(index).addClass("active");
+   	   $("#wrapper #scroller ul").removeClass("scrollerbangdan").eq(index).addClass("scrollerbangdan");
+   });
+//单品 选项卡
+   $(".scroller .left li").click(function(){
+   	   var index=$(this).index();
+   	   $(".scroller .left li").removeClass("activefl").eq(index).addClass("activefl");
+   	   $(".scroller .right li").removeClass("activeimg").eq(index).addClass("activeimg");
+   });
+</script>
+</html>
+

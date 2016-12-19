@@ -194,4 +194,23 @@ body {
    #footer .active span{
      color:#FF4258;  
    }
-  
+ /*转载*/ 
+   .zhuangzai{
+   	  width:100%;
+   	  height:3.52rem;
+   	  position:absolute;
+   	  left:0;bottom:0;
+   	  z-index:999;
+   	  display:none;
+   }
+   .zhuangzai img{
+   	 width:100%;
+   	 height:2.88rem;
+   }
+   .zhuangzai .quxiao{
+   	 width: 100%;height:0.67rem;
+   	 text-align:center;
+   	 background:#fff;
+   	 line-height:0.67rem;
+   	 font-size:0.22rem;
+   }

@@ -61,7 +61,13 @@ $(function(){
     	$("#header .nav div").removeClass("active").eq(index).addClass("active");
     	$("#wrapper #scroller ul").removeClass("scrollerbangdan").eq(index).addClass("scrollerbangdan");
     });
-    
-    
+//榜单 转载    
+    $("#header .logo .zhuang").click(function(){
+		$(".zhuangzai").css("display","block");
+	});
+	$(".quxiao").click(function(){
+		$(".zhuangzai").css("display","none");
+	});
+
 });
 	
